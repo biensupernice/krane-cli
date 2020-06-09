@@ -12,12 +12,16 @@ import { memoize } from "lodash";
 export interface AppConfig {
   sshDir: string;
   dotConfigDir: string;
+  storeName: string;
 }
+
+export type CreateAppConfig = typeof createAppConfig;
 
 export function createAppConfig(userConfig?: Partial<AppConfig>): AppConfig {
   return {
     sshDir: path.resolve(os.homedir(), ".ssh"),
     dotConfigDir: path.resolve(os.homedir(), ".krane"),
+    storeName: "krane-cli-db",
     ...userConfig,
   };
 }

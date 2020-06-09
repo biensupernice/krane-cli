@@ -19,7 +19,7 @@ $ npm install -g krane-cli
 $ krane-cli COMMAND
 running command...
 $ krane-cli (-v|--version|version)
-krane-cli/0.0.0 darwin-x64 node-v13.3.0
+krane-cli/0.0.0 darwin-x64 node-v13.8.0
 $ krane-cli --help [COMMAND]
 USAGE
   $ krane-cli COMMAND
@@ -30,7 +30,8 @@ USAGE
 <!-- commands -->
 * [`krane-cli deploy [TAG]`](#krane-cli-deploy-tag)
 * [`krane-cli help [COMMAND]`](#krane-cli-help-command)
-* [`krane-cli login [FILE]`](#krane-cli-login-file)
+* [`krane-cli login [ENDPOINT]`](#krane-cli-login-endpoint)
+* [`krane-cli ls [FILE]`](#krane-cli-ls-file)
 
 ## `krane-cli deploy [TAG]`
 
@@ -45,8 +46,6 @@ ARGUMENTS
 ```
 
 _See code: [src/commands/deploy.ts](https://github.com/biensupernice/krane-cli/blob/v0.0.0/src/commands/deploy.ts)_
-
-_See code: [src/commands/hello.ts](https://github.com/biensupernice/krane-cli/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `krane-cli help [COMMAND]`
 
@@ -65,13 +64,24 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
 
-## `krane-cli login [FILE]`
+## `krane-cli login [ENDPOINT]`
+
+Login to a krane server
+
+```
+USAGE
+  $ krane-cli login [ENDPOINT]
+```
+
+_See code: [src/commands/login.ts](https://github.com/biensupernice/krane-cli/blob/v0.0.0/src/commands/login.ts)_
+
+## `krane-cli ls [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ krane-cli login [FILE]
+  $ krane-cli ls [FILE]
 
 OPTIONS
   -f, --force
@@ -79,5 +89,5 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/login.ts](https://github.com/biensupernice/krane-cli/blob/v0.0.0/src/commands/login.ts)_
+_See code: [src/commands/ls.ts](https://github.com/biensupernice/krane-cli/blob/v0.0.0/src/commands/ls.ts)_
 <!-- commandsstop -->

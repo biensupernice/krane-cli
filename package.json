@@ -11,6 +11,7 @@
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^2.2.3",
     "@types/lodash": "^4.14.152",
+    "awilix": "^4.2.6",
     "axios": "^0.19.2",
     "inquirer": "^7.1.0",
     "jsonwebtoken": "^8.5.1",

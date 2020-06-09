@@ -29,6 +29,13 @@ export class KraneAPI {
       .then((res) => res.data);
   }
 
+  async getDeployments() {
+    return this.client
+      .get<GetDeploymentsResponse>("/deployments")
+      .then((res) => res.data)
+      .then((res) => res.data);
+  }
+
   async createDeployment(config: KraneProjectSpec) {
     return this.client
       .post<CreateDeploymentReponse>("/deployments", config)
@@ -40,6 +47,12 @@ export class KraneAPI {
       .post(`/deployments/${deploymentName}/run?tag=${tag}`)
       .then((res) => res.data);
   }
+}
+
+interface GetDeploymentsResponse {
+  code: number;
+  data: KraneProjectSpec[];
+  success: boolean;
 }
 
 interface LoginGetResponse {
